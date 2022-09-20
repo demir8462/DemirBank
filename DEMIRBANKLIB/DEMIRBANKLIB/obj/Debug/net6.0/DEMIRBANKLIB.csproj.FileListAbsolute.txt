@@ -1,0 +1,12 @@
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\bin\Debug\net6.0\DEMIRBANKLIB.deps.json
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\bin\Debug\net6.0\DEMIRBANKLIB.dll
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\bin\Debug\net6.0\DEMIRBANKLIB.pdb
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.csproj.AssemblyReference.cache
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.AssemblyInfoInputs.cache
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.AssemblyInfo.cs
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.csproj.CoreCompileInputs.cache
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.dll
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\refint\DEMIRBANKLIB.dll
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\DEMIRBANKLIB.pdb
+C:\Users\alide\source\repos\DEMIRBANKLIB\DEMIRBANKLIB\obj\Debug\net6.0\ref\DEMIRBANKLIB.dll
