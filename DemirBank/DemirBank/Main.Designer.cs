@@ -84,6 +84,7 @@
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
@@ -122,6 +123,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -493,6 +495,7 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader15});
+            this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(-4, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(639, 258);
@@ -554,6 +557,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "SIL";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -563,6 +567,7 @@
             this.button5.TabIndex = 6;
             this.button5.Text = "DUZENLE";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button7
             // 
@@ -582,10 +587,12 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
-            this.columnHeader10});
+            this.columnHeader10,
+            this.columnHeader19});
+            this.listView2.FullRowSelect = true;
             this.listView2.Location = new System.Drawing.Point(-4, 2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(569, 249);
+            this.listView2.Size = new System.Drawing.Size(636, 249);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -619,6 +626,10 @@
             this.columnHeader10.Text = "SONRAKİ";
             this.columnHeader10.Width = 100;
             // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "DETAY";
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.listView3);
@@ -640,7 +651,7 @@
             this.columnHeader13});
             this.listView3.Location = new System.Drawing.Point(-4, 0);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(569, 281);
+            this.listView3.Size = new System.Drawing.Size(636, 281);
             this.listView3.TabIndex = 1;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -678,6 +689,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Main";
             this.Text = "Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -769,5 +781,6 @@
         private TextBox textBox4;
         private ColumnHeader columnHeader14;
         private ColumnHeader columnHeader15;
+        private ColumnHeader columnHeader19;
     }
 }

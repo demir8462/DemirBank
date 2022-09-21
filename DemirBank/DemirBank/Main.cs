@@ -16,6 +16,7 @@ namespace DemirBank
         DataTable geneltablo,dgelirtablo,dgidertablo;
         GelirGiderEklePanel gelirGiderEklePanel = new GelirGiderEklePanel();
         GelirGiderDuzen duzenlePanel = new GelirGiderDuzen();
+        Information infp = new Information();
         public Main()
         {
             InitializeComponent();
@@ -33,18 +34,25 @@ namespace DemirBank
         }
         public void goster()
         {
-            Show();
             client.veriCek();
             label1.Text = "HOS GELDIN " + client.GetUser().Name;
+            Show(); 
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             client.veriCek();
             label3.Text = client.GetUser().Varlık;
-            genelTabloDoldur();
-            dgelirTabloDoldur();
-            dgiderTabloDoldur();
+            if(tabControl1.SelectedTab.Text == "Düzenli Gelirler")
+            {
+                dgelirTabloDoldur();
+            }else if (tabControl1.SelectedTab.Text == "Düzenli Giderler")
+            {
+                dgiderTabloDoldur();
+            }else if(tabControl1.SelectedTab.Text == "GENEL")
+                genelTabloDoldur();
+
+
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
@@ -113,6 +121,35 @@ namespace DemirBank
         private void button7_Click(object sender, EventArgs e)
         {
             gelirGiderEklePanel.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            infp.Show();
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 1)
+            {
+                duzenlePanel.Goster(Convert.ToDateTime(listView2.SelectedItems[0].SubItems[2].Text), Convert.ToDateTime(listView2.SelectedItems[0].SubItems[5].Text), listView2.SelectedItems[0].SubItems[1].Text, listView2.SelectedItems[0].SubItems[0].Text);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 1)
+            {
+                if (client.gelirgiderSil(listView2.SelectedItems[0].SubItems[0].Text))
+                    MessageBox.Show("Silindi");
+                else
+                    MessageBox.Show("Sorun var !");
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
