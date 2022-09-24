@@ -1,0 +1,17 @@
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\PaketEventP.deps.json
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\PaketEventP.dll
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\PaketEventP.pdb
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\DEMIRBANKLIB.dll
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\DPlugin.dll
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\DEMIRBANKLIB.pdb
+C:\Users\alide\source\repos\DemirBank\PaketEventP\bin\Debug\net6.0\DPlugin.pdb
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.csproj.AssemblyReference.cache
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.AssemblyInfoInputs.cache
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.AssemblyInfo.cs
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.csproj.CoreCompileInputs.cache
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.csproj.CopyComplete
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.dll
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\refint\PaketEventP.dll
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\PaketEventP.pdb
+C:\Users\alide\source\repos\DemirBank\PaketEventP\obj\Debug\net6.0\ref\PaketEventP.dll

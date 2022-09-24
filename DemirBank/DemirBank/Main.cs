@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DPlugin;
+using System.Reflection;
+using DEMIRBANKLIB;
 namespace DemirBank
 {
     public partial class Main : Form
     {
+        public enum EVENTTYPE { GETPACKAGE, SENDPACKAGE, LOADTABLE }
+        public static Dictionary<EVENTTYPE,EventManager.EventDelegate> eventler = new Dictionary<EVENTTYPE,EventManager.EventDelegate>();   
+        List<DPLUGIN> pluginler = new List<DPLUGIN>();
         Client client;
         DataTable geneltablo,dgelirtablo,dgidertablo;
         GelirGiderEklePanel gelirGiderEklePanel = new GelirGiderEklePanel();
@@ -30,7 +35,44 @@ namespace DemirBank
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            loadPlugins();   
+        }
+        public static void DELPackege(IPaket paket)
+        {
+
+        }
+        void loadPlugins()
+        {
+
+            foreach (string dll in Directory.GetFiles("plugins", "*.dll"))
+            {
+
+                Assembly asm = Assembly.LoadFrom(dll);
+                foreach (Type item in asm.GetTypes())
+                {
+                    if (item.GetInterface("DPLUGIN") != null)
+                    {
+                        DPLUGIN p = Activator.CreateInstance(item) as DPLUGIN;
+                        pluginler.Add(p);
+                    }
+                }
+            }
+            foreach (DPLUGIN item in pluginler)
+            {
+                item.Run();
+                if (item.manager.events[DPLUGIN.EVENTTYPE.GETPACKAGE] != null)
+                {
+                    eventler[EVENTTYPE.GETPACKAGE] += item.manager.events[DPLUGIN.EVENTTYPE.GETPACKAGE];
+                }
+                if (item.manager.events[DPLUGIN.EVENTTYPE.SENDPACKAGE] != null)
+                {
+                    eventler[EVENTTYPE.SENDPACKAGE] += item.manager.events[DPLUGIN.EVENTTYPE.SENDPACKAGE];
+                }
+            }
+        }
+        void loadEvents()
+        {
+
         }
         public void goster()
         {

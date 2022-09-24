@@ -1,0 +1,15 @@
+C:\Users\alide\source\repos\DemirBank\DPlugin\bin\Debug\net6.0\DPlugin.deps.json
+C:\Users\alide\source\repos\DemirBank\DPlugin\bin\Debug\net6.0\DPlugin.dll
+C:\Users\alide\source\repos\DemirBank\DPlugin\bin\Debug\net6.0\DPlugin.pdb
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.csproj.AssemblyReference.cache
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.AssemblyInfoInputs.cache
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.AssemblyInfo.cs
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.csproj.CoreCompileInputs.cache
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.dll
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\refint\DPlugin.dll
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.pdb
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\ref\DPlugin.dll
+C:\Users\alide\source\repos\DemirBank\DPlugin\bin\Debug\net6.0\DEMIRBANKLIB.dll
+C:\Users\alide\source\repos\DemirBank\DPlugin\bin\Debug\net6.0\DEMIRBANKLIB.pdb
+C:\Users\alide\source\repos\DemirBank\DPlugin\obj\Debug\net6.0\DPlugin.csproj.CopyComplete

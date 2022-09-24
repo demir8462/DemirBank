@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "DemirBank/1.0.0": {
         "dependencies": {
-          "DEMIRBANKLIB": "1.0.0.0"
+          "DEMIRBANKLIB": "1.0.0.0",
+          "DPlugin": "1.0.0.0"
         },
         "runtime": {
           "DemirBank.dll": {}
@@ -17,6 +18,14 @@
       "DEMIRBANKLIB/1.0.0.0": {
         "runtime": {
           "DEMIRBANKLIB.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DPlugin/1.0.0.0": {
+        "runtime": {
+          "DPlugin.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -31,6 +40,11 @@
       "sha512": ""
     },
     "DEMIRBANKLIB/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DPlugin/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

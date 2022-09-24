@@ -13,6 +13,11 @@
       <HintPath>..\..\DEMIRBANKLIB\DEMIRBANKLIB\bin\Debug\net6.0\DEMIRBANKLIB.dll</HintPath>
     </Reference>
   </ItemGroup>
+	<ItemGroup>
+		<Reference Include="DPlugin">
+			<HintPath>..\..\DEMIRBANK\DPlugin\bin\Debug\net6.0\DPlugin.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

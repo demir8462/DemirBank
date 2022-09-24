@@ -170,6 +170,7 @@ namespace DEMIRBANKSERVER
                 if(paket.gelirGider.ITYPE == GelirGider.ISLEMTIPI.DUZENLIGELIR) // DÜZENLİ GELİR EKLE
                 {
                     paket.TYPE = IPaket.PAKETTYPE.RESPONSE;
+                    paket.detay = "DÜZENLİ GELİR VERİSİ";
                     paket.CEVAP = manager.DuzenliGelirEkle(paket.user, paket.gelirGider);
                     bf.Serialize(stream, paket);
                     Form1.consoleLogs.Add("[DGELIR]EKLEME YANIT :"+paket.CEVAP.ToString());
@@ -177,6 +178,7 @@ namespace DEMIRBANKSERVER
                 {
                     paket.TYPE = IPaket.PAKETTYPE.RESPONSE;
                     paket.CEVAP = manager.DuzenliGiderEkle(paket.user, paket.gelirGider);
+                    paket.detay = "DUZENLI GIDER VERISI";
                     bf.Serialize(stream, paket);
                     Form1.consoleLogs.Add("[DGIDER]EKLEME YANIT :" + paket.CEVAP.ToString());
                 }
@@ -184,6 +186,7 @@ namespace DEMIRBANKSERVER
                 {
                     paket.CEVAP= manager.DuzenliGelirUpdate(paket.user, paket.gelirGider);
                     paket.TYPE = IPaket.PAKETTYPE.RESPONSE;
+                    paket.detay = "GELIR GUNCELLEMEYE CEVAP";
                     bf.Serialize(stream, paket);
                     Form1.consoleLogs.Add("[DGELIR GUNCELLEME]:" + paket.CEVAP.ToString());
                 }
@@ -191,6 +194,7 @@ namespace DEMIRBANKSERVER
                 {
                     paket.CEVAP = manager.DuzenliGelirUpdate(paket.user, paket.gelirGider);
                     paket.TYPE = IPaket.PAKETTYPE.RESPONSE;
+                    paket.detay = "GIDERUPDATE";
                     bf.Serialize(stream, paket);
                     Form1.consoleLogs.Add("[DGIDER GUNCELLEME]:" + paket.CEVAP.ToString());
                 }
@@ -198,6 +202,7 @@ namespace DEMIRBANKSERVER
                 {
                     paket.CEVAP = manager.gelirgiderSil(paket.user, paket.gelirGider.id);
                     paket.TYPE = IPaket.PAKETTYPE.RESPONSE;
+                    paket.detay = "GIDER SILME CEVAP";
                     bf.Serialize(stream, paket);
                     Form1.consoleLogs.Add("[GELIRGIDER SİL]:" + paket.CEVAP.ToString());
                 }

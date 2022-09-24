@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net6.0-windows</TargetFramework>
+	  <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DEMIRBANKLIB">
+      <HintPath>..\..\DEMIRBANKLIB\DEMIRBANKLIB\bin\Debug\net6.0\DEMIRBANKLIB.dll</HintPath>
+    </Reference>
+    <Reference Include="DPlugin">
+      <HintPath>..\DPlugin\bin\Debug\net6.0\DPlugin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

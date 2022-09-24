@@ -23,3 +23,5 @@ C:\Users\alide\source\repos\DemirBank\DemirBank\obj\Debug\net6.0-windows\DemirBa
 C:\Users\alide\source\repos\DemirBank\DemirBank\obj\Debug\net6.0-windows\DemirBank.GelirGiderEklePanel.resources
 C:\Users\alide\source\repos\DemirBank\DemirBank\obj\Debug\net6.0-windows\DemirBank.GelirGiderDuzen.resources
 C:\Users\alide\source\repos\DemirBank\DemirBank\obj\Debug\net6.0-windows\DemirBank.Information.resources
+C:\Users\alide\source\repos\DemirBank\DemirBank\bin\Debug\net6.0-windows\DPlugin.dll
+C:\Users\alide\source\repos\DemirBank\DemirBank\bin\Debug\net6.0-windows\DPlugin.pdb

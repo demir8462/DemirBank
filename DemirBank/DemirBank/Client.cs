@@ -30,8 +30,10 @@ namespace DemirBank
                 stream.WriteTimeout = 2000;
                 
                 paketAlThr = new Thread(new ThreadStart(PaketKontrol));
-                
-            }catch(Exception e)
+                Main.eventler.Add(Main.EVENTTYPE.GETPACKAGE, Main.DELPackege);
+                Main.eventler.Add(Main.EVENTTYPE.SENDPACKAGE, Main.DELPackege);
+            }
+            catch(Exception e)
             {
                 MessageBox.Show("Sunucuya bağlanılamadı !");
             }
@@ -43,17 +45,25 @@ namespace DemirBank
         {
             try
             {
+                Main.eventler[Main.EVENTTYPE.SENDPACKAGE](paket);
                 bf.Serialize(stream, paket);
             }
             catch(Exception e)
             {
-                MessageBox.Show("Sunucu Bağı Kesik !");
+                MessageBox.Show(e.Message);
                 ClientKapat();
             }
         }
         bool PaketAl()
         {
-            paket = (IPaket)bf.Deserialize(stream);
+            try
+            {
+                paket = (IPaket)bf.Deserialize(stream);
+                Main.eventler[Main.EVENTTYPE.GETPACKAGE](paket);
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
             return (paket != null);
         }
         public void PaketKontrol()
@@ -87,6 +97,7 @@ namespace DemirBank
                     {
                         if (paket.CEVAP)
                         {
+                            giris = true;
                             return true;
                             
                         }else
