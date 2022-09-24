@@ -19,7 +19,7 @@ namespace DemirBank
         TcpClient client;
         NetworkStream stream;
         BinaryFormatter bf = new BinaryFormatter();
-        Thread paketAlThr;
+        Task paketAlTask;
         bool giris;
         public Client()
         {
@@ -29,7 +29,7 @@ namespace DemirBank
                 stream = client.GetStream();
                 stream.WriteTimeout = 2000;
                 
-                paketAlThr = new Thread(new ThreadStart(PaketKontrol));
+                paketAlTask = new Task(PaketKontrol);
                 Main.eventler.Add(Main.EVENTTYPE.GETPACKAGE, Main.DELPackege);
                 Main.eventler.Add(Main.EVENTTYPE.SENDPACKAGE, Main.DELPackege);
             }
@@ -286,7 +286,7 @@ namespace DemirBank
                 {
                     // kaç kere yatırılmadıysa o kadar kere para ekle hesaba !
                     int carpan = (DateTime.Now.Date - enson.Date).Days / kacgundebir;
-                    enson = enson.AddDays(((DateTime.Now.Date - enson.Date).Days / kacgundebir)*kacgundebir);
+                    enson = enson.AddDays(carpan*kacgundebir);
                     birdahaki = enson.AddDays(kacgundebir);
                     DgelirGuncelle(enson, birdahaki, miktar.ToString(), detay, duzenliGelirler.Rows[i][0].ToString());
                     paraYatir((miktar * carpan).ToString(),detay);
@@ -354,7 +354,7 @@ namespace DemirBank
                 {
                     // kaç kere yatırılmadıysa o kadar kere para ekle hesaba !
                     int carpan = (DateTime.Now.Date - enson.Date).Days / kacgundebir;
-                    enson = enson.AddDays(((DateTime.Now.Date - enson.Date).Days / kacgundebir) * kacgundebir);
+                    enson = enson.AddDays(carpan * kacgundebir);
                     birdahaki = enson.AddDays(kacgundebir);
                     DgelirGuncelle(enson, birdahaki, miktar.ToString(), detay, duzenliGiderler.Rows[i][0].ToString());
                     paraCek((miktar * carpan).ToString(), detay);

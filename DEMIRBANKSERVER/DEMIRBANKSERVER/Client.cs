@@ -16,14 +16,15 @@ namespace DEMIRBANKSERVER
 
         public IPaket paket = new IPaket();
 
-        Thread paketTHR;
+        Task paketAlTask;
+
         dbmanager manager = new dbmanager();
         public Client(Socket soket)
         {
             this.soket = soket;
             stream = new NetworkStream(soket);
-            paketTHR = new Thread(new ThreadStart(paketKontrol));
-            paketTHR.Start();
+            paketAlTask = new Task(paketKontrol);
+            paketAlTask.Start();
         }
         void paketKontrol()
         {

@@ -13,14 +13,14 @@ namespace DEMIRBANKSERVER
         TcpListener listener = new TcpListener(PORT);
         List<Client> clients = new List<Client>();
         public static List<Client> removeclients = new List<Client>();
-        Thread baglantiThr,oluClientThr;
+        Task baglantiTask,oluClientTask;
         public void startListen()
         {
             listener.Start();
-            baglantiThr = new Thread(new ThreadStart(baglantiAl));
-            oluClientThr = new Thread(new ThreadStart(oluClientKontrol));
-            baglantiThr.Start();
-            oluClientThr.Start();
+            baglantiTask = new Task(baglantiAl);
+            oluClientTask = new Task(oluClientKontrol);
+            baglantiTask.Start();
+            oluClientTask.Start();
         }
         
         void baglantiAl()

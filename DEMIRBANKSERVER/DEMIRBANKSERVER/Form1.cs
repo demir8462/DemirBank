@@ -4,14 +4,14 @@ namespace DEMIRBANKSERVER
     {
         Server server = new Server();
         public static List<string> consoleLogs = new List<string>();
-        Thread consoleTHR;
+        Task consoleTask;
         public Form1()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
 
             InitializeComponent();
-            consoleTHR = new Thread(new ThreadStart(ConsoleLogYaz));
-            consoleTHR.Start(); 
+            consoleTask = new Task(ConsoleLogYaz);
+            consoleTask.Start(); 
         }
 
         private void button1_Click(object sender, EventArgs e)
