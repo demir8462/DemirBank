@@ -25,20 +25,29 @@ namespace DEMIRBANKSERVER
         
         void baglantiAl()
         {
+            object a = new object();
+
             while (true)
             {
-                clients.Add(new Client(listener.AcceptSocket()));
-                Thread.Sleep(1000);
+                lock(a)
+                {
+                    clients.Add(new Client(listener.AcceptSocket()));
+                    Thread.Sleep(1000);
+                }
             }
 
         }
         void oluClientKontrol()
         {
+            object a = new object();
             while (true)
             {
                 foreach (Client item in removeclients)
                 {
-                    clients.Remove(item);
+                    lock(a)
+                    {
+                        clients.Remove(item);
+                    }
                     
                 }
                 Thread.Sleep(2000);
